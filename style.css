@@ -1,0 +1,13 @@
+.rowdiv {
+    float: left;
+}
+
+.black {
+    background-color: black;
+}
+
+.div {
+    border: 1px solid black;
+    width: 16px;
+    height: 16px;
+}
