@@ -9,20 +9,24 @@
   <button id="clear">Clear</button>
   <div id="canvas"></div>
   <script>
+    // Selects certain elements on the page.
     const canvas = document.querySelector("#canvas");
     const clear = document.querySelector("#clear");
+
+    // Creates the standard grid
     createDivs(16);
 
+    // Adds an eventlistener to the clear button
     clear.addEventListener('click', clearCanvas);
 
-    let target = document.querySelectorAll(".div");
-
+    // Clears the canvas
     function clearCanvas() {
         canvas.innerHTML = '';
         let size = prompt('How big does the canvas have to be?');
         checkMinimum(size);
     }
 
+    // Checks if the submitted size is valid
     function checkMinimum (size) {
         if (size >= 16) {
             document.documentElement.style.setProperty("--n", size);
@@ -32,6 +36,7 @@
         }
     }
 
+    // Creates the dividers and adds eventlisteners to them
     function createDivs (num) {
         for (let i = 0; i < num**2; i++) {
             const container = document.querySelector('#canvas');
