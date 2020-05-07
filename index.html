@@ -6,8 +6,13 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <button id="clear">Clear</button>
-  <div id="canvas"></div>
+  <center><h1>Etch a Sketch</h1></center>
+  <center>
+    <div id="canvas"></div>
+  </center>
+  <center>
+    <button id="clear">Clear</button>
+  </center>
   <script>
     // Selects certain elements on the page.
     const canvas = document.querySelector("#canvas");
@@ -16,7 +21,7 @@
     // Creates the standard grid
     createDivs(16);
 
-    // Adds an eventlistener to the clear button
+    // Adds an eventlistener to the buttons
     clear.addEventListener('click', clearCanvas);
 
     // Clears the canvas
