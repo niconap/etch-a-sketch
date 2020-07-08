@@ -17,7 +17,8 @@
   <center>
     <button id="theme">Dark Theme</button> 
     <button id="clear">Clear</button>
-    <input type="number" id="inputbox">
+    <input type="number" placeholder="Enter Size" id="inputbox">
+    <p id="alertbox"></p>
   </center>
   <script>
     let themeVar = 0;
@@ -26,6 +27,7 @@
     const canvas = document.querySelector("#canvas");
     const clear = document.querySelector("#clear");
     const theme = document.querySelector("#theme");
+    const alertbox = document.querySelector("#alertbox");
 
     // Creates the standard grid
     createDivs(16);
@@ -67,8 +69,9 @@
         if (size >= 16 && size <= 100) {
           document.documentElement.style.setProperty("--n", size);
           createDivs(size);
+          alertbox.textContent = "";
         } else {
-            alert('Please enter a number that is greater than 16 and smaller than 100.');
+          alertbox.textContent = "Please enter a number that is greater than 16 and smaller than 100.";
         }
     }
 

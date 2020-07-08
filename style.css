@@ -14,6 +14,7 @@ h1 {
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 40px 0px var(--boxshadow);
+    margin-bottom: 35px;
 }
 
 center {
@@ -50,6 +51,12 @@ button:active {
     grid-template-rows: repeat(var(--n), 1fr);
     border: 1px solid lightgray;
     margin-top: 100px;
+}
+
+#alertbox {
+    font-family: Calibri, sans-serif;
+    color: var(--color);
+    margin-top: 10px;
 }
 
 #label {
