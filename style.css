@@ -5,7 +5,7 @@
 
 /* Header styling */
 h1 {
-    font-family: calibri, arial;
+    font-family: calibri, sans-serif;
     margin-top: 70px;
     background-color: var(--buttonbackground);
     width: 200px;
@@ -64,6 +64,29 @@ button:active {
     font-family: Calibri, sans-serif;
 }
 
+#inputbox {
+    width: 100px;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: var(--color);
+}
+
+#bottom {
+    color: var(--color);
+    margin-left: 10px;
+    font-family: Calibri, sans-serif;
+}
+
+#bottom a {
+    text-decoration: none;
+    color: var(--color);
+}
+
+#bottom a:hover {
+    text-decoration: underline;
+}
+
 /* Is assigned when the user hovers over a div */
 .black {
     background-color: var(--pixelcolor);
@@ -81,12 +104,4 @@ button:active {
     --buttonbackground: lightblue;
     --pixelcolor: black;
     --boxshadow: rgba(171,171,171,0.5);
-}
-
-#inputbox {
-    width: 100px;
-    height: 40px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    color: var(--color);
 }
