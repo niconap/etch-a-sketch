@@ -12,6 +12,7 @@
   </center>
   <center>
     <button id="clear">Clear</button>
+    <input type="number" id="inputbox">
   </center>
   <script>
     // Selects certain elements on the page.
@@ -27,7 +28,7 @@
     // Clears the canvas
     function clearCanvas() {
         canvas.innerHTML = '';
-        let size = prompt('How big does the canvas have to be?');
+        let size = document.getElementById("inputbox").value;
         checkMinimum(size);
     }
 
@@ -38,7 +39,6 @@
           createDivs(size);
         } else {
             alert('Please enter a number that is greater than 16 and smaller than 100.');
-            clearCanvas();
         }
     }
 

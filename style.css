@@ -51,3 +51,10 @@ button:active {
 :root {
     --n: 16;
 }
+
+#inputbox {
+    width: 100px;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
