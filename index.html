@@ -6,30 +6,60 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <center><h1>Etch a Sketch</h1></center>
+  <center>
+    <div id="header">
+      <h1>Etch a Sketch</h1>
+    </div>
+  </center>
   <center>
     <div id="canvas"></div>
   </center>
   <center>
+    <button id="theme">Dark Theme</button> 
     <button id="clear">Clear</button>
     <input type="number" id="inputbox">
   </center>
   <script>
+    let themeVar = 0;
+
     // Selects certain elements on the page.
     const canvas = document.querySelector("#canvas");
     const clear = document.querySelector("#clear");
+    const theme = document.querySelector("#theme");
 
     // Creates the standard grid
     createDivs(16);
 
-    // Adds an eventlistener to the buttons
+    // Adds an eventlistener to several elements
     clear.addEventListener('click', clearCanvas);
+    theme.addEventListener('click', changeTheme)
 
     // Clears the canvas
     function clearCanvas() {
         canvas.innerHTML = '';
         let size = document.getElementById("inputbox").value;
         checkMinimum(size);
+    }
+    
+    // Changes the theme
+    function changeTheme() {
+      if (themeVar == 0) {
+        document.documentElement.style.setProperty("--background", "#2b2b2b");
+        document.documentElement.style.setProperty("--color", "white");
+        document.documentElement.style.setProperty("--buttonbackground", "#779ecb");
+        document.documentElement.style.setProperty("--pixelcolor", "white");
+        document.documentElement.style.setProperty("--boxshadow", "black");
+        themeVar = 1;
+        theme.textContent = "Light Theme";
+      } else {
+        document.documentElement.style.setProperty("--background", "#fff");
+        document.documentElement.style.setProperty("--color", "black");
+        document.documentElement.style.setProperty("--buttonbackground", "lightblue");
+        document.documentElement.style.setProperty("--pixelcolor", "black");
+        document.documentElement.style.setProperty("--boxshadow", "rgba(171,171,171,0.5)");
+        themeVar = 0;
+        theme.textContent = "Dark Theme";
+      }
     }
 
     // Checks if the submitted size is valid

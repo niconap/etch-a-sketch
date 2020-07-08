@@ -1,12 +1,23 @@
 * {
     margin: 0px;
+    background: var(--background);
 }
 
 /* Header styling */
 h1 {
     font-family: calibri, arial;
-    margin-top: 100px;
-    color: gray;
+    margin-top: 70px;
+    background-color: var(--buttonbackground);
+    width: 200px;
+    padding: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 0px var(--boxshadow);
+}
+
+center {
+    background: var(--background);
 }
 
 /* Button styling */
@@ -15,16 +26,15 @@ button {
     border-radius: 5px;
     padding: 15px;
     margin-top: 10px;
-    margin-left: 5px;
     margin-right: 5px;
-    background-color: lightblue;
+    background-color: var(--buttonbackground);
     color: white;
     font-weight: bold;
 }
 
 button:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 5px 0px rgba(171,171,171,0.5);
+    box-shadow: 0px 0px 10px 0px var(--boxshadow);
 }
 
 button:active {
@@ -42,14 +52,28 @@ button:active {
     margin-top: 100px;
 }
 
-/* Is assigned when the user hovers over a div */
-.black {
-    background-color: black;
+#label {
+    color: var(--color);
+    font-family: Calibri, sans-serif;
 }
 
-/* Determines the size of the grid */
+/* Is assigned when the user hovers over a div */
+.black {
+    background-color: var(--pixelcolor);
+}
+
+.theme {
+    margin-top: 40px;
+}
+
+/* Determines several CSS properties */
 :root {
     --n: 16;
+    --background: #fff;
+    --color: black;
+    --buttonbackground: lightblue;
+    --pixelcolor: black;
+    --boxshadow: rgba(171,171,171,0.5);
 }
 
 #inputbox {
@@ -57,4 +81,5 @@ button:active {
     height: 40px;
     border: 1px solid lightgray;
     border-radius: 5px;
+    color: var(--color);
 }
