@@ -20,7 +20,9 @@
     <input type="number" placeholder="Enter Size" id="inputbox">
     <p id="alertbox"></p>
   </center>
-  <p id="bottom">Made by: <a href="https://github.com/niconap">Nico</a></p>
+  <a href="https://github.com/niconap/etch-a-sketch" target="_blank">
+    <img src="GitHub-Mark-64px.png" id="githubicon">
+  </a>
   <script>
     let themeVar = 0;
 
@@ -52,6 +54,7 @@
         document.documentElement.style.setProperty("--buttonbackground", "#779ecb");
         document.documentElement.style.setProperty("--pixelcolor", "white");
         document.documentElement.style.setProperty("--boxshadow", "black");
+        document.getElementById("githubicon").src = "GitHub-Mark-Light-64px.png";
         themeVar = 1;
         theme.textContent = "Light Theme";
       } else {
@@ -60,6 +63,7 @@
         document.documentElement.style.setProperty("--buttonbackground", "lightblue");
         document.documentElement.style.setProperty("--pixelcolor", "black");
         document.documentElement.style.setProperty("--boxshadow", "rgba(171,171,171,0.5)");
+        document.getElementById("githubicon").src = "GitHub-Mark-64px.png";
         themeVar = 0;
         theme.textContent = "Dark Theme";
       }
