@@ -87,6 +87,19 @@ button:active {
     text-decoration: underline;
 }
 
+#githubicon {
+    opacity: 50%;
+    height: 30px;
+    width: 30px;
+    margin-left: 50px;
+    align-items: center;
+}
+
+#githubicon:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
 /* Is assigned when the user hovers over a div */
 .black {
     background-color: var(--pixelcolor);
