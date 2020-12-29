@@ -1,3 +1,5 @@
+# Etch-a-Sketch
+
 This is an Etch-a-Sketch program that you can run in your browser.
 
 - Hover your mouse over the canvas to sketch.
